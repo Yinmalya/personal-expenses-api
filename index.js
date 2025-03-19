@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import "dotenv/config";
-
+import expenseRouter from "./routes/expenses.route.js";
 // Import Routes
 // import expenseRoutes from "./routes/expenses.js";
 // import userRoutes from "./routes/users.js";
@@ -17,7 +17,7 @@ const app = express();
 // Global Middleware
 app.use(express.json());
 // // app.use(userRoutes);
-// app.use(expenseRoutes);
+app.use('/',expenseRouter);
 
 
 // Listen for incoming requests

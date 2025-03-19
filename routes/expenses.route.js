@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addExpenses, deleteExpense, getExpense, getExpenses, updateExpenses } from "../controllers/expense-controllers";
+import { addExpenses, deleteExpense, getExpense, getExpenses, updateExpenses } from "../controllers/expense-controllers.js";
 
 const expenseRouter = Router();
 // define routes
@@ -11,7 +11,7 @@ expenseRouter.get("/expenses", getExpenses)
 
 expenseRouter.delete("/expenses", deleteExpense)
 
-expenseRouter.update("/expenses", updateExpenses)
+expenseRouter.patch("/expenses", updateExpenses)
 
 
 export default expenseRouter;
